@@ -138,3 +138,48 @@ def checkPrime(num):
 
 print(checkPrime(13))
 
+# 8. **Factorial Calculation**: Write a Python function that calculates the factorial of a number.
+#     - *Input*: 5
+#     - *Output*: "Factorial of 5 is 120."
+
+def factorial(n):
+    if n == 0:
+        return 1
+
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+
+    return result
+
+# Example usage
+input_number = 5
+factorial_result = factorial(input_number)
+print(f"Factorial of {input_number} is {factorial_result}.")
+
+
+# 9.  **Fibonacci Sequence**: Write a Python function that generates the first n numbers in the Fibonacci sequence.
+#     - *Input*: 5
+#     - *Output*: "[0, 1, 1, 2, 3]"
+
+def fibonacci_sequence(n):
+    sequence = [0, 1]  # Initialize with the first two Fibonacci numbers
+
+    for i in range(2, n):
+        next_number = sequence[i-1] + sequence[i-2]
+        sequence.append(next_number)
+
+    return sequence[:n]  # Return the first n numbers
+
+# Example usage
+n = 5
+fibonacci_numbers = fibonacci_sequence(n)
+print(fibonacci_numbers)
+
+# 10. **List Comprehension**: Use list comprehension to create a list of the squares of the numbers from 1 to 10.
+#     - *Input*: None
+#     - *Output*: "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
+
+squares = [x**2 for x in range(1, 11)]
+
+print(squares)
